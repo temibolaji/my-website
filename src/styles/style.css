@@ -654,3 +654,165 @@ footer {
     50% { background-position: 200% 200%; }
     100% { background-position: 0% 0%; }
 }
+
+/* Add/update these media queries at the end of your CSS file */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .nav-container {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column-reverse;
+        padding: 2rem 1rem;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .greeting {
+        font-size: 2rem;
+    }
+
+    .typing-effect {
+        font-size: 1.2rem;
+    }
+
+    .bio {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .tech-stack-pills {
+        justify-content: center;
+    }
+
+    .hero-social-links {
+        justify-content: center;
+    }
+
+    /* Skills Section */
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-category {
+        padding: 1rem;
+    }
+
+    .skill-items {
+        justify-content: center;
+    }
+
+    /* Experience Section */
+    .section {
+        margin: 4rem 1rem;
+        padding: 1.5rem;
+    }
+
+    .experience-item {
+        padding: 1.5rem;
+    }
+
+    .tech-pills {
+        justify-content: center;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    /* Footer */
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .tech-stack-pills span {
+        font-size: 0.8rem;
+    }
+
+    .experience-header {
+        text-align: center;
+    }
+
+    .achievements {
+        padding-left: 1rem;
+    }
+
+    .tech-pills span {
+        font-size: 0.8rem;
+    }
+}
+
+/* Add these base styles to ensure proper scaling */
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* Improve the achievements section for mobile */
+.achievements {
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-size: calc(14px + 0.3vw); /* Responsive font size */
+}
+
+.achievements li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 480px) {
+    .achievements {
+        padding-left: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Add viewport-relative units for container widths */
+.section {
+    max-width: min(1200px, 90vw);
+}
+
+/* Ensure images scale properly */
+img {
+    max-width: 100%;
+    height: auto;
+}
