@@ -555,61 +555,30 @@ body {
 footer {
     padding: 4rem 5%;
     text-align: center;
-    background: var(--glass-background);
-    border-top: 1px solid var(--glass-border);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    position: relative;
-    overflow: hidden;
-}
-
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, 
-        var(--accent-color), 
-        var(--highlight-color), 
-        var(--accent-color));
-    opacity: 0.5;
+    border-top: 1px solid #eaeaea;
+    background: var(--background-color);
+    @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        background: linear-gradient(180deg, var(--subtle-color), var(--background-color));
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
 }
 
 .social-links {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin: 2rem 0;
 }
 
 .social-links a {
-    color: var(--text-color);
+    color: var(--secondary-color);
     text-decoration: none;
-    font-size: 1.5rem;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: var(--subtle-color);
-    transition: all var(--transition-speed) var(--bounce-effect);
-    box-shadow: var(--glass-shadow);
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: var(--background-color);
-    background: var(--accent-color);
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(45, 42, 38, 0.12);
-}
-
-.footer-text {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-top: 2rem;
+    color: var(--highlight-color);
 }
 
 @media (max-width: 768px) {
@@ -664,16 +633,6 @@ footer::before {
 
     .bio {
         margin: 1rem auto;
-    }
-
-    .social-links {
-        gap: 1.5rem;
-    }
-
-    .social-links a {
-        width: 45px;
-        height: 45px;
-        font-size: 1.25rem;
     }
 }
 
