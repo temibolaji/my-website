@@ -1,0 +1,15 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+    
+    .nav-container {
+        background-color: #2d2d2d;
+    }
+    
+    .tech-stack-pills span {
+        background-color: #333333;
+        color: #ffffff;
+    }
+}
